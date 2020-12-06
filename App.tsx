@@ -1,9 +1,8 @@
 import 'react-native-gesture-handler';
 import React, {useEffect} from 'react';
 import {Alert, SafeAreaView, StatusBar} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import Screen from 'screens';
-import {ESS, ESSbuild} from 'utils/stylesUtil';
+import Screen from 'components/screens';
+import {backgraoundColor, ESS, ESSbuild} from 'utils/stylesUtil';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -23,11 +22,9 @@ const App = () => {
   }, []);
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="light-content" backgroundColor={backgraoundColor} />
       <SafeAreaView style={styles.root}>
-        <NavigationContainer>
-          <Screen />
-        </NavigationContainer>
+        <Screen />
       </SafeAreaView>
     </>
   );
