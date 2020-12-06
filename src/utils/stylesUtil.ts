@@ -13,12 +13,21 @@ export function ESS<T extends NamedStyles<T> | NamedStyles<any>>(
   return EStyleSheet.create(styles);
 }
 
+export const backgraoundColor = '#121212';
+export const activeColor = '#4F59DC';
+
 export const ESSbuild = () =>
   EStyleSheet.build({
     $rem: REM,
     $deviceHeight: deviceHeight,
-    $defaultColor: 'rgb(239,243,255)',
-    // $defaultFont: 'NanumSquareL',
-    // $defaultFontRegular: 'NanumSquareR',
-    // $defaultFontBold: 'NanumSquareB',
+    $activeColor: '#4F59DC',
+    $backgraoundColor: '#121212',
+    $cardColor: '#18171A',
+    $disableColor: '#61627E',
+    $a3: '#312E33',
+    $a5: '#f7f9ff',
+    $font: 'NotoSansKR-Regular',
+    $fontMedium: 'NotoSansKR-Medium',
+    $fontBold: 'NotoSansKR-Bold',
+    $fontLight: 'NotoSansKR-Light',
   });
