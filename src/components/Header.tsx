@@ -26,7 +26,13 @@ const styles = ESS({
     bottom: undefined,
     padding: 10 * REM,
   },
-  backButtonImg: {
+  addButton: {
+    position: 'absolute',
+    right: 15 * REM,
+    bottom: undefined,
+    padding: 10 * REM,
+  },
+  buttonImg: {
     tintColor: '$activeColor',
   },
   headerText: {
@@ -36,46 +42,66 @@ const styles = ESS({
     color: '$disableColor',
   },
   bottomLine: {
-    bottom: -2 * REM,
     width: '100%',
     height: 2 * REM,
+  },
+  innerHeaderColor: {
+    backgroundColor: '$cardColor',
   },
 });
 
 type HeaderType = {
   children?: string;
-  type?: 'default' | 'timer';
+  type?: 'default' | 'list' | 'workout';
   onBack?: () => void;
+  onAdd?: () => void;
 };
 
-export default function Header({children, type, onBack}: HeaderType) {
-  let header = styles.header;
+export default function Header({
+  children,
+  type = 'default',
+  onBack,
+  onAdd,
+}: HeaderType) {
+  let headerStyle = styles.header;
   switch (type) {
-    case 'timer':
-      header = styles.timerHeader;
-      console.log('timer');
+    case 'workout':
+      headerStyle = [styles.timerHeader, styles.innerHeaderColor];
+      console.log('workout');
       break;
-
-    default:
+    case 'list':
+      headerStyle = [styles.timerHeader, styles.innerHeaderColor];
+      console.log('list');
       break;
   }
   return (
     <>
-      <View style={header}>
-        {type === 'timer' && (
+      <View style={headerStyle}>
+        {type !== 'default' && (
           <Button onPress={() => onBack && onBack()} style={styles.backButton}>
             <Image
-              style={styles.backButtonImg}
+              style={styles.buttonImg}
               source={require('images/back.png')}
             />
           </Button>
         )}
         <Text
-          style={[styles.headerText, type === 'timer' && {color: activeColor}]}>
+          style={[
+            styles.headerText,
+            type !== 'default' && {color: activeColor},
+          ]}>
           {children}
         </Text>
+        {type === 'list' && (
+          <Button onPress={() => onAdd && onAdd()} style={styles.addButton}>
+            <Image
+              style={styles.buttonImg}
+              source={require('images/addWorkout.png')}
+            />
+          </Button>
+        )}
       </View>
-      {type === 'timer' && (
+      {type !== 'default' && (
         <LinearGradient
           colors={['rgba(97,98,126,0.2)', 'rgba(97,98,126,0)']}
           style={styles.bottomLine}

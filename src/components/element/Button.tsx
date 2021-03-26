@@ -1,8 +1,7 @@
-import useTimeout from 'hooks/useTimeout';
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
-import {Pressable, StyleProp, ViewStyle} from 'react-native';
-import {ESS, REM} from 'utils/stylesUtil';
+import { Pressable, StyleProp, ViewStyle } from 'react-native';
+import { ESS, REM } from 'utils/stylesUtil';
 
 const styles = ESS({
   button: {
@@ -19,7 +18,7 @@ type Props = {
   noneBlock?: boolean;
 };
 
-export default function Button({children, style, onPress, noneBlock}: Props) {
+export default function Button({ children, style, onPress, noneBlock }: Props) {
   const [block, setBlock] = useState(false);
 
   useEffect(() => {

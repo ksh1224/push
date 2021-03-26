@@ -1,8 +1,8 @@
-import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
+import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import { Image, Text, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {activeColor, ESS, REM} from 'utils/stylesUtil';
+import { activeColor, ESS, REM } from 'utils/stylesUtil';
 import Button from './element/Button';
 
 const styles = ESS({
@@ -76,7 +76,7 @@ const styles = ESS({
   },
 });
 
-export default function BottomBar({navigation, state}: BottomTabBarProps) {
+export default function BottomBar({ navigation, state }: BottomTabBarProps) {
   return (
     <>
       <LinearGradient
@@ -118,13 +118,13 @@ export default function BottomBar({navigation, state}: BottomTabBarProps) {
                 onPress={() => {
                   navigation.navigate(type);
                 }}>
-                <View style={[{flex: 1, opacity: isClick ? 1 : 0.4}]}>
+                <View style={[{ flex: 1, opacity: isClick ? 1 : 0.4 }]}>
                   <View style={[styles.buttonTop]}>
                     <Image
                       style={[
                         styles.buttonImg,
                         imgSize,
-                        isClick && {tintColor: activeColor},
+                        isClick && { tintColor: activeColor },
                       ]}
                       source={source}
                     />
@@ -133,7 +133,7 @@ export default function BottomBar({navigation, state}: BottomTabBarProps) {
                     <Text
                       style={[
                         styles.buttonText,
-                        isClick && {color: activeColor},
+                        isClick && { color: activeColor },
                       ]}>
                       {text}
                     </Text>

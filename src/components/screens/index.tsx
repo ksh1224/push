@@ -1,9 +1,9 @@
 import React from 'react';
-import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import RootNavigater from 'components/navigaters/RootNavigater';
-import {View} from 'react-native';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {backgraoundColor, ESS} from 'utils/stylesUtil';
+import { StatusBar } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { backgraoundColor, ESS } from 'utils/stylesUtil';
 
 const styles = ESS({
   root: {
@@ -17,19 +17,22 @@ const styles = ESS({
 
 export default function Main() {
   return (
-    <View style={styles.root}>
+    <>
+      <StatusBar barStyle="light-content" backgroundColor={backgraoundColor} />
       <SafeAreaProvider>
-        <NavigationContainer
-          theme={{
-            colors: {
-              ...DefaultTheme.colors,
-              background: backgraoundColor,
-            },
-            dark: true,
-          }}>
-          <RootNavigater />
-        </NavigationContainer>
+        <SafeAreaView style={styles.root}>
+          <NavigationContainer
+            theme={{
+              colors: {
+                ...DefaultTheme.colors,
+                background: backgraoundColor,
+              },
+              dark: true,
+            }}>
+            <RootNavigater />
+          </NavigationContainer>
+        </SafeAreaView>
       </SafeAreaProvider>
-    </View>
+    </>
   );
 }

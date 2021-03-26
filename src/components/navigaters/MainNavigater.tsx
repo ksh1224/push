@@ -1,5 +1,5 @@
 import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Mission from 'components/main/Mission';
 import WorkOut from 'components/main/WorkOut';
 import UserInfo from 'components/main/UserInfo';

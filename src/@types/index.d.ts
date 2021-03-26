@@ -1,15 +1,27 @@
-import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
-import {RouteProp} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import { RouteProp } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 export {};
 
 declare global {
-  type AnyObject = {[key: string]: any};
+  type AnyObject = { [key: string]: any };
+
+  enum MissionType {
+    tabata = 'tabata',
+    static = 'static',
+    setreps = 'setreps',
+    maxreps = 'maxreps',
+    workOutTime = 'workOutTime',
+    totalCount = 'totalCount',
+    totalAccTime = 'totalAccTime',
+  }
 
   type RootStackParamList = {
     MainStack: undefined;
+    WorkOutList: undefined;
     Timer: undefined;
+    MissionSetting: undefined;
   };
 
   type MainStackParamList = {
