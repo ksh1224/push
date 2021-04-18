@@ -1,19 +1,12 @@
 import 'react-native-gesture-handler';
-import React, { useEffect } from 'react';
-import { Alert } from 'react-native';
+import React from 'react';
+import type {Node} from 'react';
 import Screen from 'components/screens';
-import { ESSbuild } from 'utils/stylesUtil';
-
-declare const global: { HermesInternal: null | {} };
+import {ESSbuild} from 'utils/stylesUtil';
 
 ESSbuild();
 
-const App = () => {
-  useEffect(() => {
-    if (global.HermesInternal === null) {
-      Alert.alert('Not Hermes!');
-    }
-  }, []);
+const App: () => Node = () => {
   return <Screen />;
 };
 

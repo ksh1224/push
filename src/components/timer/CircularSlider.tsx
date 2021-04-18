@@ -83,6 +83,28 @@ function CircularSlider({
   const [circleCenterX, setCircleCenterX] = useState(0);
   const [circleCenterY, setCircleCenterY] = useState(0);
 
+  const wakePanResponder = useRef(
+    PanResponder.create({
+      onMoveShouldSetPanResponder: () => true,
+      onMoveShouldSetPanResponderCapture: () => true,
+      onPanResponderGrant: () => setCircleCenter(),
+      onPanResponderMove: (evt, { moveX, moveY }) => {
+        console.log('onPanResponderMove', evt);
+        let newAngle =
+          Math.atan2(moveY - circleCenterY, moveX - circleCenterX) +
+          Math.PI / 2;
+        if (newAngle < 0) {
+          newAngle += 2 * Math.PI;
+        }
+        setAngleLengthValue(newAngle);
+        onUpdate({
+          angleLength: newAngle,
+          percent: (newAngle / (2 * Math.PI)) * 100,
+        });
+      },
+    }),
+  ).current;
+
   const getContainerWidth = () => strokeWidth + radius * 2;
 
   const setCircleCenter = () => {
@@ -92,11 +114,6 @@ function CircularSlider({
       setCircleCenterY(py + halfOfContainer);
     });
   };
-
-  const [
-    wakePanResponder,
-    setWakePanResponder,
-  ] = useState<PanResponderInstance>();
 
   const containerWidth = getContainerWidth();
 
@@ -111,31 +128,6 @@ function CircularSlider({
   useEffect(() => {
     setAngleLengthValue(angleLength);
   }, [angleLength]);
-
-  useEffect(() => {
-    setWakePanResponder(
-      PanResponder.create({
-        onMoveShouldSetPanResponder: () => true,
-        onMoveShouldSetPanResponderCapture: () => true,
-        onPanResponderGrant: () => setCircleCenter(),
-        onPanResponderMove: (evt, { moveX, moveY }) => {
-          console.log('onPanResponderMove', evt);
-          let newAngle =
-            Math.atan2(moveY - circleCenterY, moveX - circleCenterX) +
-            Math.PI / 2;
-          if (newAngle < 0) {
-            newAngle += 2 * Math.PI;
-          }
-          setAngleLengthValue(newAngle);
-          onUpdate({
-            angleLength: newAngle,
-            percent: (newAngle / (2 * Math.PI)) * 100,
-          });
-        },
-      }),
-    );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [circleCenterY, circleCenterX]);
 
   return (
     <View
