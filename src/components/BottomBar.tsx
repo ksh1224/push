@@ -1,9 +1,10 @@
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
+import { mission, workout, user, setting } from 'images';
 import React from 'react';
-import { Image, Text, View } from 'react-native';
+import { Image, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { activeColor, ESS, REM } from 'utils/stylesUtil';
-import Button from './element/Button';
+import { mainColor, ESS, REM } from 'utils/stylesUtil';
+import { Button, CustomText } from './element';
 
 const styles = ESS({
   bottomBar: {
@@ -70,7 +71,6 @@ const styles = ESS({
   },
   buttonText: {
     lineHeight: 14 * REM,
-    fontFamily: '$fontMedium',
     fontSize: 10 * REM,
     color: '$disableColor',
   },
@@ -90,22 +90,22 @@ export default function BottomBar({ navigation, state }: BottomTabBarProps) {
             let source, imgSize, text;
             switch (type) {
               case 'WorkOut':
-                source = require('images/workout.png');
+                source = workout;
                 imgSize = styles.workoutImg;
                 text = '운동';
                 break;
               case 'Mission':
-                source = require('images/mission.png');
+                source = mission;
                 imgSize = styles.missionImg;
                 text = '미션';
                 break;
               case 'UserInfo':
-                source = require('images/user.png');
+                source = user;
                 imgSize = styles.userImg;
                 text = '내 정보';
                 break;
               case 'Setting':
-                source = require('images/setting.png');
+                source = setting;
                 imgSize = styles.settingImg;
                 text = '환경설정';
                 break;
@@ -124,19 +124,19 @@ export default function BottomBar({ navigation, state }: BottomTabBarProps) {
                       style={[
                         styles.buttonImg,
                         imgSize,
-                        isClick && { tintColor: activeColor },
+                        isClick && { tintColor: mainColor },
                       ]}
                       source={source}
                     />
                   </View>
                   <View style={styles.buttonBottom}>
-                    <Text
+                    <CustomText
                       style={[
                         styles.buttonText,
-                        isClick && { color: activeColor },
+                        isClick && { color: mainColor },
                       ]}>
                       {text}
-                    </Text>
+                    </CustomText>
                   </View>
                 </View>
               </Button>

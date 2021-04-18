@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Modal, Pressable } from 'react-native';
+import { View, Pressable } from 'react-native';
+import Modal from 'react-native-modal';
 import { ESS } from 'utils/stylesUtil';
 
 const styles = ESS({
@@ -19,13 +20,13 @@ interface ModalProps {
   children: JSX.Element;
 }
 
-export default function CustomModal({
+export function CustomModal({
   visible = false,
   close = () => {},
   children,
 }: ModalProps) {
   return (
-    <Modal visible={visible} transparent>
+    <Modal isVisible={visible}>
       <View style={styles.flex}>
         <Pressable onPress={close} style={styles.modalContainer}>
           <Pressable onPress={() => {}}>{children}</Pressable>

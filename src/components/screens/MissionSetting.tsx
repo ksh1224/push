@@ -18,16 +18,16 @@ const styles = ESS({
   },
   itemWrap: {},
   titleText: {
-    fontFamily: '$fontBold',
+    fontFamily: '$bold',
     fontSize: 19 * REM,
     lineHeight: 23 * REM,
-    color: '$activeColor',
+    color: '$mainColor',
   },
   infoText: {
-    fontFamily: '$fontBold',
+    fontFamily: '$bold',
     fontSize: 15 * REM,
     lineHeight: 18 * REM,
-    color: '$activeColor',
+    color: '$mainColor',
   },
 });
 

@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
-import Button from 'components/element/Button';
+import { Button, CustomText } from 'components/element';
 import Header from 'components/Header';
-import Cursor from 'components/timer/Cursor';
+import { tabata, max, timmer, schedule, staticImg, setImg } from 'images';
 import React from 'react';
 
 import { ScrollView, View, Text, Image } from 'react-native';
@@ -35,10 +35,9 @@ const styles = ESS({
     elevation: 3,
   },
   cardText: {
-    fontFamily: '$font',
     fontSize: 17 * REM,
     lineHeight: 20 * REM,
-    color: '$activeColor',
+    color: '$mainColor',
   },
 });
 
@@ -56,13 +55,13 @@ export default function WorkOut() {
           <Button
             style={styles.card}
             onPress={() => navigation.push('WorkOutList')}>
-            <Image source={require('images/tabata.png')} />
+            <Image source={tabata} />
             <Text style={[styles.cardText, { marginTop: 10 * REM }]}>
               타바타
             </Text>
           </Button>
           <Button style={styles.card}>
-            <Image source={require('images/static.png')} />
+            <Image source={staticImg} />
             <Text style={[styles.cardText, { marginTop: 10 * REM }]}>
               버티기
             </Text>
@@ -70,13 +69,13 @@ export default function WorkOut() {
         </View>
         <View style={styles.cardRow}>
           <Button style={styles.card}>
-            <Image source={require('images/set.png')} />
+            <Image source={setImg} />
             <Text style={[styles.cardText, { marginTop: 5 * REM }]}>
               반복 세트
             </Text>
           </Button>
           <Button style={styles.card}>
-            <Image source={require('images/max.png')} />
+            <Image source={max} />
             <Text style={[styles.cardText, { marginTop: 5 * REM }]}>
               반복 최대
             </Text>
@@ -84,16 +83,16 @@ export default function WorkOut() {
         </View>
         <View style={styles.cardRow}>
           <Button style={styles.card}>
-            <Image source={require('images/timmer.png')} />
-            <Text style={[styles.cardText, { marginTop: 12 * REM }]}>
+            <Image source={timmer} />
+            <CustomText style={[styles.cardText, { marginTop: 12 * REM }]}>
               시간 측정
-            </Text>
+            </CustomText>
           </Button>
           <Button style={styles.card}>
-            <Image source={require('images/schedule.png')} />
-            <Text style={[styles.cardText, { marginTop: 12 * REM }]}>
+            <Image source={schedule} />
+            <CustomText style={[styles.cardText, { marginTop: 12 * REM }]}>
               출석 체크
-            </Text>
+            </CustomText>
           </Button>
         </View>
       </ScrollView>

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* pushTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* pushTests.m */; };
+		07A6C8CD80EB4427B038842B /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C21AC4A8FBAC47DCAC4A1928 /* NotoSansKR-Black.otf */; };
+		0CD1D195EF4E4C9097AA2B14 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A8A3240DA4FC8B92E4B49 /* NotoSansKR-Bold.otf */; };
+		12738EFE473B49889E8A55BC /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7D8BF3B60DE4F3E90D2821B /* NotoSansKR-Thin.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -17,8 +20,11 @@
 		2DCD954D1E0B4F2C00145EB5 /* pushTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* pushTests.m */; };
 		4F8058A21301E0A40EB48C2F /* libPods-push-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524E2A3293E3FEEA6786FE83 /* libPods-push-tvOSTests.a */; };
 		622274F214192CEE0AAB0A45 /* libPods-push-pushTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EA28C2D3F9ED27AF4559EA /* libPods-push-pushTests.a */; };
+		727D10FA67704AD5B670B1EE /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E04F23054C934DCFAA0E5345 /* NotoSansKR-Light.otf */; };
+		79E41E80CCEE47D3909C90A0 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2BF878E020D1404F9CE16D7D /* NotoSansKR-Regular.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		99EA25450D967742DE7555B3 /* libPods-push.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2043B09D90FE582AF37E2B2B /* libPods-push.a */; };
+		A5AF55DB4DF140F1B5827C89 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1FB557A3805401C94707716 /* NotoSansKR-Medium.otf */; };
 		FBF546E0D8283390012A3B50 /* libPods-push-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 509D800BBD6F044A061D5A73 /* libPods-push-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -52,9 +58,11 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = push/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = push/main.m; sourceTree = "<group>"; };
 		2043B09D90FE582AF37E2B2B /* libPods-push.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-push.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BF878E020D1404F9CE16D7D /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Regular.otf"; path = "../assets/fonts/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* push-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "push-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* push-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "push-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46212EAA8151291B74EDB684 /* Pods-push-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-push-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-push-tvOS/Pods-push-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4E0A8A3240DA4FC8B92E4B49 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Bold.otf"; path = "../assets/fonts/NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		509D800BBD6F044A061D5A73 /* libPods-push-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-push-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		524E2A3293E3FEEA6786FE83 /* libPods-push-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-push-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C8C0AE4B506695BE7B9EFE /* Pods-push-pushTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-push-pushTests.release.xcconfig"; path = "Target Support Files/Pods-push-pushTests/Pods-push-pushTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,8 +70,12 @@
 		876291B43663B38957DC4EA7 /* Pods-push-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-push-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-push-tvOSTests/Pods-push-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		96ECE82F7A6452C4AC4A845B /* Pods-push.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-push.release.xcconfig"; path = "Target Support Files/Pods-push/Pods-push.release.xcconfig"; sourceTree = "<group>"; };
 		B32BF01DABE0B20508DB59E9 /* Pods-push-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-push-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-push-tvOSTests/Pods-push-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		C1FB557A3805401C94707716 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Medium.otf"; path = "../assets/fonts/NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		C21AC4A8FBAC47DCAC4A1928 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Black.otf"; path = "../assets/fonts/NotoSansKR-Black.otf"; sourceTree = "<group>"; };
 		D3808B55290AB931EA549D68 /* Pods-push.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-push.debug.xcconfig"; path = "Target Support Files/Pods-push/Pods-push.debug.xcconfig"; sourceTree = "<group>"; };
 		D5CB7F3235193C62703A7BA5 /* Pods-push-pushTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-push-pushTests.debug.xcconfig"; path = "Target Support Files/Pods-push-pushTests/Pods-push-pushTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7D8BF3B60DE4F3E90D2821B /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Thin.otf"; path = "../assets/fonts/NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
+		E04F23054C934DCFAA0E5345 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Light.otf"; path = "../assets/fonts/NotoSansKR-Light.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F6EA28C2D3F9ED27AF4559EA /* libPods-push-pushTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-push-pushTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +148,20 @@
 			name = push;
 			sourceTree = "<group>";
 		};
+		17482C2571E3420593ABA6BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C21AC4A8FBAC47DCAC4A1928 /* NotoSansKR-Black.otf */,
+				4E0A8A3240DA4FC8B92E4B49 /* NotoSansKR-Bold.otf */,
+				E04F23054C934DCFAA0E5345 /* NotoSansKR-Light.otf */,
+				C1FB557A3805401C94707716 /* NotoSansKR-Medium.otf */,
+				2BF878E020D1404F9CE16D7D /* NotoSansKR-Regular.otf */,
+				D7D8BF3B60DE4F3E90D2821B /* NotoSansKR-Thin.otf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		19FC6DC1C818426A6EA75960 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,7 +174,6 @@
 				876291B43663B38957DC4EA7 /* Pods-push-tvOSTests.debug.xcconfig */,
 				B32BF01DABE0B20508DB59E9 /* Pods-push-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -181,6 +206,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				19FC6DC1C818426A6EA75960 /* Pods */,
+				17482C2571E3420593ABA6BE /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -210,6 +236,7 @@
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
 				B53AC97D6036543D3B61967A /* [CP] Copy Pods Resources */,
+				46F6E3117A1E62E26F92764F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +259,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				6B246903EBECDB31A8B80C06 /* [CP] Copy Pods Resources */,
+				6FDB3742360199DCC9B78025 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +370,12 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				07A6C8CD80EB4427B038842B /* NotoSansKR-Black.otf in Resources */,
+				0CD1D195EF4E4C9097AA2B14 /* NotoSansKR-Bold.otf in Resources */,
+				727D10FA67704AD5B670B1EE /* NotoSansKR-Light.otf in Resources */,
+				A5AF55DB4DF140F1B5827C89 /* NotoSansKR-Medium.otf in Resources */,
+				79E41E80CCEE47D3909C90A0 /* NotoSansKR-Regular.otf in Resources */,
+				12738EFE473B49889E8A55BC /* NotoSansKR-Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +447,24 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		46F6E3117A1E62E26F92764F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-push-pushTests/Pods-push-pushTests-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-push-pushTests/Pods-push-pushTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		56CACCC4BDCBECB3D50ACF43 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,6 +503,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-push/Pods-push-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FDB3742360199DCC9B78025 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-push/Pods-push-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-push/Pods-push-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A6BD93087B2C679EB5EDDF8D /* [CP] Check Pods Manifest.lock */ = {

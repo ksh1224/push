@@ -18,7 +18,7 @@ type Props = {
   noneBlock?: boolean;
 };
 
-export default function Button({ children, style, onPress, noneBlock }: Props) {
+export function Button({ children, style, onPress, noneBlock }: Props) {
   const [block, setBlock] = useState(false);
 
   useEffect(() => {

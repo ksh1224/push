@@ -1,10 +1,11 @@
-import {useNavigation} from '@react-navigation/native';
-import Button from 'components/element/Button';
+import { useNavigation } from '@react-navigation/native';
+import { Button } from 'components/element';
 import Header from 'components/Header';
+import { right } from 'images';
 import React from 'react';
-import {View, Text, Image} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
-import {ESS, REM} from 'utils/stylesUtil';
+import { View, Text, Image } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import { ESS, REM } from 'utils/stylesUtil';
 
 const styles = ESS({
   root: {
@@ -30,8 +31,8 @@ const styles = ESS({
   listItemText: {
     fontSize: 15 * REM,
     lineHeight: 18 * REM,
-    fontFamily: '$fontBold',
-    color: '$activeColor',
+    fontFamily: '$bold',
+    color: '$mainColor',
   },
   listItemRight: {
     position: 'absolute',
@@ -40,7 +41,7 @@ const styles = ESS({
     right: 15 * REM,
   },
   listItemRightImg: {
-    tintColor: '$activeColor',
+    tintColor: '$mainColor',
   },
 });
 
@@ -61,10 +62,7 @@ export default function WorkOutList() {
           <Text style={styles.listItemText}>미션 이름</Text>
           <Text style={styles.listItemText}>Time : 00:00:00</Text>
           <View style={styles.listItemRight}>
-            <Image
-              style={styles.listItemRightImg}
-              source={require('images/right.png')}
-            />
+            <Image style={styles.listItemRightImg} source={right} />
           </View>
         </Button>
       </ScrollView>

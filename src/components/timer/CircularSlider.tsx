@@ -8,10 +8,10 @@ import Svg, {
   Defs,
   Stop,
 } from 'react-native-svg';
-import range from 'lodash/range';
+import _ from 'lodash';
 
 import ClockFace from './ClockFace';
-import { activeColor as defaultActiveColor, REM } from 'utils/stylesUtil';
+import { mainColor as defaultmainColor, REM } from 'utils/stylesUtil';
 
 function calculateArcCircle(
   index0: number,
@@ -57,7 +57,7 @@ type Props = {
   segments: number;
   strokeWidth: number;
   radius: number;
-  activeColor: string;
+  mainColor: string;
   showClockFace?: boolean;
   clockFaceType: string;
   clockFaceColor: string;
@@ -73,7 +73,7 @@ function CircularSlider({
   clockFaceType,
   strokeWidth,
   radius,
-  activeColor,
+  mainColor,
   showClockFace,
   clockFaceColor,
   bgCircleColor,
@@ -110,7 +110,6 @@ function CircularSlider({
 
   useEffect(() => {
     setAngleLengthValue(angleLength);
-    console.log('angleLength', angleLength);
   }, [angleLength]);
 
   useEffect(() => {
@@ -120,6 +119,7 @@ function CircularSlider({
         onMoveShouldSetPanResponderCapture: () => true,
         onPanResponderGrant: () => setCircleCenter(),
         onPanResponderMove: (evt, { moveX, moveY }) => {
+          console.log('onPanResponderMove', evt);
           let newAngle =
             Math.atan2(moveY - circleCenterY, moveX - circleCenterX) +
             Math.PI / 2;
@@ -144,7 +144,7 @@ function CircularSlider({
       ref={circleRef}>
       <Svg height={containerWidth + 2 * REM} width={containerWidth + 2 * REM}>
         <Defs>
-          {range(segments).map((i) => {
+          {_.range(segments).map((i) => {
             const { fromX, fromY, toX, toY } = calculateArcCircle(
               i,
               segments,
@@ -160,7 +160,7 @@ function CircularSlider({
                 y1={fromY.toFixed(2)}
                 x2={toX.toFixed(2)}
                 y2={toY.toFixed(2)}>
-                <Stop offset="0%" stopColor={activeColor} />
+                <Stop offset="0%" stopColor={mainColor} />
               </LinearGradient>
             );
           })}
@@ -189,7 +189,7 @@ function CircularSlider({
               stroke={clockFaceColor}
             />
           )}
-          {range(segments).map((i) => {
+          {_.range(segments).map((i) => {
             const { fromX, fromY, toX, toY } = calculateArcCircle(
               i,
               segments,
@@ -217,14 +217,14 @@ function CircularSlider({
             */}
 
           <G
-            fill={activeColor}
+            fill={mainColor}
             transform={{ translate: `${stop.toX}, ${stop.toY}` }}
             {...wakePanResponder?.panHandlers}>
             <Circle
               onPress={() => setAngleLengthValue(angleLength)}
               r={(strokeWidth - 1) / 2}
               fill={bgCircleColor}
-              stroke={activeColor}
+              stroke={mainColor}
               strokeWidth="1"
             />
           </G>
@@ -240,7 +240,7 @@ CircularSlider.defaultProps = {
   segments: 5,
   strokeWidth: 40 * REM,
   radius: 145 * REM,
-  activeColor: defaultActiveColor,
+  mainColor: defaultmainColor,
   clockFaceColor: '#020202',
   bgCircleColor: '#171717',
   clockFaceType: '60',

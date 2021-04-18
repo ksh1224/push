@@ -1,0 +1,15 @@
+export { default as workout } from './workout.png';
+export { default as addWorkout } from './addWorkout.png';
+export { default as back } from './back.png';
+export { default as max } from './max.png';
+export { default as mission } from './mission.png';
+export { default as plus } from './plus.png';
+export { default as right } from './right.png';
+export { default as schedule } from './schedule.png';
+export { default as setImg } from './set.png';
+export { default as setting } from './setting.png';
+export { default as staticImg } from './static.png';
+export { default as tabata } from './tabata.png';
+export { default as timmer } from './timmer.png';
+export { default as user } from './user.png';
+export { default as under } from './under.png';

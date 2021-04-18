@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import Button from 'components/element/Button';
 import React, { useEffect, useState } from 'react';
 import { View, Modal, Text, Pressable } from 'react-native';
 import { ESS, REM, backgraoundColor } from 'utils/stylesUtil';
@@ -47,8 +46,7 @@ const styles = ESS({
   },
   timeText: {
     fontSize: 40 * REM,
-    fontFamily: '$fontBold',
-    fontWeight: '900',
+    fontFamily: '$bold',
     color: '#fff',
   },
   colon: {
@@ -56,7 +54,7 @@ const styles = ESS({
     paddingHorizontal: 5 * REM,
   },
   select: {
-    color: '$activeColor',
+    color: '$mainColor',
   },
 });
 
@@ -65,8 +63,8 @@ const numberToTwoString = (number: number): string =>
 
 export default function TimeSettingModal({
   visible = false,
-  close = () => {},
-}: Props) {
+}: // close = () => {},
+Props) {
   const [angleLength, setAngleLength] = useState(0);
   const [hour, setHour] = useState(0);
   const [minute, setMinute] = useState(0);

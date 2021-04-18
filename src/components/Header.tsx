@@ -1,9 +1,10 @@
+import { addWorkout, back } from 'images';
 import React from 'react';
 
-import {View, Text, Image} from 'react-native';
+import { View, Image } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {ESS, REM, activeColor} from 'utils/stylesUtil';
-import Button from './element/Button';
+import { ESS, REM, mainColor } from 'utils/stylesUtil';
+import { Button, CustomText } from './element';
 
 const styles = ESS({
   header: {
@@ -33,12 +34,11 @@ const styles = ESS({
     padding: 10 * REM,
   },
   buttonImg: {
-    tintColor: '$activeColor',
+    tintColor: '$mainColor',
   },
   headerText: {
     fontSize: 26 * REM,
-    fontFamily: 'fontBold',
-    fontWeight: 'bold',
+    fontFamily: '$bold',
     color: '$disableColor',
   },
   bottomLine: {
@@ -79,25 +79,19 @@ export default function Header({
       <View style={headerStyle}>
         {type !== 'default' && (
           <Button onPress={() => onBack && onBack()} style={styles.backButton}>
-            <Image
-              style={styles.buttonImg}
-              source={require('images/back.png')}
-            />
+            <Image style={styles.buttonImg} source={back} />
           </Button>
         )}
-        <Text
+        <CustomText
           style={[
             styles.headerText,
-            type !== 'default' && {color: activeColor},
+            type !== 'default' && { color: mainColor },
           ]}>
           {children}
-        </Text>
+        </CustomText>
         {type === 'list' && (
           <Button onPress={() => onAdd && onAdd()} style={styles.addButton}>
-            <Image
-              style={styles.buttonImg}
-              source={require('images/addWorkout.png')}
-            />
+            <Image style={styles.buttonImg} source={addWorkout} />
           </Button>
         )}
       </View>

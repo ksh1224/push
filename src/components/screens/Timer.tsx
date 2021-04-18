@@ -1,10 +1,9 @@
-import {useNavigation} from '@react-navigation/native';
-import Button from 'components/element/Button';
+import { useNavigation } from '@react-navigation/native';
+import { Button } from 'components/element';
 import Header from 'components/Header';
 import React from 'react';
-import {View, Text, Image} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
-import {ESS, REM} from 'utils/stylesUtil';
+import { View, Text } from 'react-native';
+import { ESS, REM } from 'utils/stylesUtil';
 
 const styles = ESS({
   root: {
@@ -31,8 +30,8 @@ const styles = ESS({
     borderRadius: 10 * REM,
   },
   buttonText: {
-    fontFamily: '$fontBold',
-    color: '$activeColor',
+    fontFamily: '$bold',
+    color: '$mainColor',
     fontSize: 25 * REM,
     lineHeight: 30 * REM,
   },

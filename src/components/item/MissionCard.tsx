@@ -1,7 +1,7 @@
-import Button from 'components/element/Button';
+import { Button, CustomText } from 'components/element';
 import React from 'react';
-import {View, Text} from 'react-native';
-import {backgraoundColor, ESS, REM} from 'utils/stylesUtil';
+import { View } from 'react-native';
+import { ESS, REM } from 'utils/stylesUtil';
 
 const styles = ESS({
   card: {
@@ -22,10 +22,9 @@ const styles = ESS({
     alignItems: 'center',
   },
   contentsText: {
-    fontFamily: '$fontMedium',
     fontSize: 15 * REM,
     lineHeight: 18 * REM,
-    color: '$activeColor',
+    color: '$mainColor',
   },
   bottomWrap: {
     height: 20 * REM,
@@ -41,7 +40,9 @@ export default function MissionCard() {
   return (
     <Button style={styles.card} onPress={() => console.log('mission')}>
       <View style={styles.topWrap}>{/*  */}</View>
-      <Text style={styles.contentsText}>sss</Text>
+      <CustomText family="medium" style={styles.contentsText}>
+        sss
+      </CustomText>
       <View style={styles.bottomWrap}>{/*  */}</View>
     </Button>
   );

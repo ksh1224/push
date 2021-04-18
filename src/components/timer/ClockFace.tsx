@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react';
-import { G, Circle, Text, Line } from 'react-native-svg';
+import React from 'react';
+import { G, Text, Line } from 'react-native-svg';
 import range from 'lodash/range';
 import { REM } from 'utils/stylesUtil';
 

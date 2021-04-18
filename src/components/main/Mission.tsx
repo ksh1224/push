@@ -1,7 +1,8 @@
-import Button from 'components/element/Button';
+import { Button } from 'components/element';
 import Header from 'components/Header';
 import MissionCard from 'components/item/MissionCard';
 import TimeSettingModal from 'components/timer/TimeSettingModal';
+import { under } from 'images';
 import React from 'react';
 
 import { ScrollView, View, Text, Image } from 'react-native';
@@ -23,7 +24,7 @@ const styles = ESS({
     paddingTop: 10 * REM,
     paddingBottom: 25 * REM,
     fontSize: 20 * REM,
-    fontFamily: '$fontBold',
+    fontFamily: '$bold',
     color: '$disableColor',
   },
   listItem: {
@@ -39,8 +40,8 @@ const styles = ESS({
   },
   listItemText: {
     fontSize: 18 * REM,
-    fontFamily: '$fontBold',
-    color: '$activeColor',
+    fontFamily: '$bold',
+    color: '$mainColor',
   },
   under: {
     width: 100 * REM,
@@ -50,7 +51,7 @@ const styles = ESS({
     marginVertical: 20 * REM,
   },
   underImg: {
-    tintColor: '$activeColor',
+    tintColor: '$mainColor',
   },
 });
 
@@ -71,7 +72,7 @@ export default function Mission() {
           </Text>
         </View>
         <Button style={styles.under}>
-          <Image style={styles.underImg} source={require('images/under.png')} />
+          <Image style={styles.underImg} source={under} />
         </Button>
       </ScrollView>
       <TimeSettingModal visible />
